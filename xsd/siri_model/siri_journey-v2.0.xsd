@@ -910,8 +910,8 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="JourneyRelationType" type="JourneyRelationTypeEnumeration">
     <xsd:annotation>
-  	 <xsd:documentation>Specifies the type of the relation, e.g., joining, splitting, replacement etc.</xsd:documentation>
-  	</xsd:annotation>
+     <xsd:documentation>Specifies the type of the relation, e.g., joining, splitting, replacement etc.</xsd:documentation>
+    </xsd:annotation>
    </xsd:element>
    <xsd:group ref="JourneyRelationInfoGroup"/>
    <xsd:element ref="RelatedJourney" maxOccurs="unbounded"/>
@@ -924,15 +924,15 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:choice>
     <xsd:element name="CallInfo" type="RelatedCallStructure">
-  	 <xsd:annotation>
-  	  <xsd:documentation>Information about the stop at which the JOURNEY is related to another JOURNEY.</xsd:documentation>
-  	 </xsd:annotation>
-  	</xsd:element>
-  	<xsd:element name="JourneyPartInfo" type="RelatedJourneyPartStructure">
-  	 <xsd:annotation>
-  	  <xsd:documentation>Information about the JOURNEY PART for which the JOURNEY has a JOURNEY RELATION.</xsd:documentation>
-  	 </xsd:annotation>
-  	</xsd:element>
+     <xsd:annotation>
+      <xsd:documentation>Information about the stop at which the JOURNEY is related to another JOURNEY.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="JourneyPartInfo" type="RelatedJourneyPartStructure">
+     <xsd:annotation>
+      <xsd:documentation>Information about the JOURNEY PART for which the JOURNEY has a JOURNEY RELATION.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
    </xsd:choice>
   </xsd:sequence>
  </xsd:group>
@@ -943,9 +943,9 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:extension base="AbstractCallStructure">
     <xsd:sequence>
- 	 <xsd:element ref="AimedDepartureTime" minOccurs="0"/>
- 	 <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
- 	</xsd:sequence>
+     <xsd:element ref="AimedDepartureTime" minOccurs="0"/>
+     <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
+    </xsd:sequence>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
@@ -966,8 +966,8 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:extension base="ConnectingJourneyRefStructure">
     <xsd:sequence>
-  	 <xsd:group ref="JourneyRelationInfoGroup" minOccurs="0"/>
-  	</xsd:sequence>
+     <xsd:group ref="JourneyRelationInfoGroup" minOccurs="0"/>
+    </xsd:sequence>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
