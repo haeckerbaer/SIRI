@@ -60,3 +60,5 @@ function msg() {
 function err() {
     msg "$*" 1>&2
 }
+
+travis-branch-commit()
