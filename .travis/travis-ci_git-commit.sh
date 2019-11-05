@@ -40,8 +40,8 @@ function travis-branch-commit() {
         return 1
     fi
     local remote=origin
-    if [[ $GITHUB_TOKEN ]]; then
-        remote=https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO
+    if [[ $GH_TOKEN ]]; then
+        remote=https://$GH_TOKEN@github.com/$GH_REPO
     fi
     if [[ $TRAVIS_BRANCH != sbb-changerequests ]]; then
         msg "not pushing updates to branch $TRAVIS_BRANCH"
