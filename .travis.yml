@@ -4,13 +4,7 @@ before_script:
   - sudo apt-get install -qq libxml2-utils
 
 script:
-  - bash xmllint-check.sh
+  - bash .travis/xmllint-check.sh
 
 after_script:
-  - git config --global user.email "travis@travis-ci.org"
-  - git config --global user.name "Travis CI"
-  - git config --global push.default current
-  - git stash
-  - git checkout ${TRAVIS_BRANCH}
-  - git stash pop
-  - git push https://${GH_TOKEN}@github.com/${GH_REPO}.git
+  - bash .travis/travis-ci_git-commit.sh
