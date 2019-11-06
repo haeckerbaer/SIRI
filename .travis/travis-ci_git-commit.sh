@@ -29,7 +29,7 @@ function travis-branch-commit() {
         return 1
     fi
     # make Travis CI skip this build
-    if ! git commit -m "Travis CI update [ci skip]"; then
+    if ! git commit -m "Travis CI update [skip ci]"; then
         err "failed to commit updates"
         return 1
     fi
@@ -43,7 +43,7 @@ function travis-branch-commit() {
     if [[ $GH_TOKEN ]]; then
         remote=https://$GH_TOKEN@github.com/$GH_REPO
     fi
-    if [[ $TRAVIS_BRANCH != sbb-changerequests ]]; then
+    if [[ $TRAVIS_BRANCH != development ]] && [[ $TRAVIS_BRANCH != integration ]]; then
         msg "not pushing updates to branch $TRAVIS_BRANCH"
         return 0
     fi
