@@ -89,6 +89,7 @@ Rail transport, Roads and road transport
  </xsd:annotation>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_utility-v1.1.xsd"/>
  <xsd:include schemaLocation="siri_operator_support-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_time-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_situationIdentity-v1.1.xsd"/>
@@ -426,6 +427,18 @@ Values for these elements can be specified on an annual schedule and will be inh
      <xsd:documentation>Alternative identifier of LINE that an external system may associate with journey.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:choice>
+    <xsd:element name="BrandingRef" type="BrandingRefStructure" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>Reference to a BRANDING.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Branding" type="BrandingStructure" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>An arbitrary marketing classification.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="LineIdentityGroup">
@@ -632,6 +645,37 @@ Values for these elements can be specified on an annual schedule and will be inh
    <xsd:enumeration value="full"/>
    <xsd:enumeration value="seatsAvailable"/>
    <xsd:enumeration value="standingAvailable"/>
+   <xsd:enumeration value="unknown"/>
+   <xsd:enumeration value="empty">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle is considered empty by most measures, and has few or no passengers onboard, but is still accepting passengers.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="manySeatsAvailable">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle has a large percentage of seats available. What percentage of free seats out of the total seats available is to be considered large enough to fall into this category is determined at the discretion of the producer.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="fewSeatsAvailable">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle has a small percentage of seats available. What percentage of free seats out of the total seats available is to be considered small enough to fall into this category is determined at the discretion of the producer.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="standingRoomOnly">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle can currently accommodate only standing passengers.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="crushedStandingRoomOnly">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle can currently accommodate only standing passengers and has limited space for them.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="notAcceptingPassengers">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle cannot accept passengers.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
   </xsd:restriction>
  </xsd:simpleType>
  <xsd:simpleType name="DriverCodeType">
@@ -679,5 +723,39 @@ Values for these elements can be specified on an annual schedule and will be inh
    <xsd:extension base="InfoChannelCodeType"/>
   </xsd:simpleContent>
  </xsd:complexType>
+ <!-- ======================================================================= -->
+ <xsd:simpleType name="BrandingCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a BRANDING.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="BrandingRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a BRANDING.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="BrandingCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:complexType name="BrandingStructure">
+  <xsd:annotation>
+   <xsd:documentation>An arbitrary marketing classification.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="TypeOfValueGroup"/>
+  </xsd:sequence>
+  <xsd:attribute name="derivedFromObjectRef" type="BrandingIdType" use="optional">
+   <xsd:annotation>
+    <xsd:documentation>Identity of object from which this BRANDING was derived.</xsd:documentation>
+   </xsd:annotation>
+  </xsd:attribute>
+ </xsd:complexType>
+ <xsd:simpleType name="BrandingIdType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of BRANDING.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="TypeOfValueIdType"/>
+ </xsd:simpleType>
  <!-- ======================================================================= -->
 </xsd:schema>
