@@ -211,7 +211,7 @@ Rail transport, Roads and road transport
      <xsd:sequence>
       <xsd:group ref="ValueSetGroup"/>
      </xsd:sequence>
-     <xsd:attribute name="id" type="VslueSetIdType"/>
+     <xsd:attribute name="id" type="ValueSetIdType"/>
     </xsd:restriction>
    </xsd:complexContent>
   </xsd:complexType>
@@ -231,7 +231,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:group ref="ValueSetGroup"/>
   </xsd:sequence>
-  <xsd:attribute name="id" type="VslueSetIdType"/>
+  <xsd:attribute name="id" type="ValueSetIdType"/>
   <xsd:attribute name="classOfValues" type="NameOfClass">
    <xsd:annotation>
     <xsd:documentation>Name of Class of Values in Set.</xsd:documentation>
@@ -270,7 +270,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:restriction base="ObjectIdType"/>
  </xsd:simpleType>
- <xsd:simpleType name="VslueSetIdType">
+ <xsd:simpleType name="ValueSetIdType">
   <xsd:annotation>
    <xsd:documentation>Type for identifier of a VALUE SET.</xsd:documentation>
   </xsd:annotation>
