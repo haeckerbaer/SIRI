@@ -304,12 +304,12 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
  <!-- ==== LINE ROUTE and destination elements======================================================== -->
  <xsd:complexType name="JourneyPartInfoStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for a refernces to  JOURNEY PARTs. +SIRI v2.0  </xsd:documentation>
+   <xsd:documentation>Type for a reference to JOURNEY PART. +SIRI v2.0  </xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="JourneyPartRef" type="xsd:normalizedString">
+   <xsd:element name="JourneyPartRef" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Refrence to a JOURNEY part. +SIRI v2.0 </xsd:documentation>
+     <xsd:documentation>Reference to a JOURNEY part. +SIRI v2.0 </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
@@ -322,12 +322,12 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
      <xsd:documentation>Operator of JOURNEY PART. +SIRI v2.0 </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="JourneyPartViewGroup"/>
+   <xsd:group ref="JourneyPartViewGroup" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:group name="JourneyPartViewGroup">
   <xsd:annotation>
-   <xsd:documentation>JourneyPart information instead of or in addition to the JourneyPartRef. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>JourneyPart information instead of or in addition to the JourneyPartRef. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="FromStopPointRef" type="StopPointRefStructure">
