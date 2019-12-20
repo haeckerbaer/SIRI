@@ -222,7 +222,7 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
    <xsd:choice>
     <xsd:element ref="InterchangeRef"/>
     <xsd:sequence>
-	 <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0">
+     <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place. +SIRI v2.0</xsd:documentation>
       </xsd:annotation>
@@ -240,7 +240,7 @@ how do we communicate this change in the interchange? If the STOP POINTs are mod
 reference the STOP POINT of the new/expected QUAY (which was transmitted in the ESTIMATED VEHICLE JOURNEY). +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="FeederVisitNumber" type="VisitNumberType" minOccurs="0">
+     <xsd:element name="FeederVisitNumber" type="VisitNumberType" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Sequence of visit to Feeder stop within Feeder JOURNEY PATTERN.</xsd:documentation>
       </xsd:annotation>
@@ -269,7 +269,7 @@ Assuming that the distributor is directed to another QUAY (and that STOP POINTs 
 should always reference the STOP POINT of the new/expected QUAY (which was transmitted in the ESTIMATED VEHICLE JOURNEY). +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="DistributorVisitNumber" type="VisitNumberType" minOccurs="0">
+     <xsd:element name="DistributorVisitNumber" type="VisitNumberType" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Sequence of visit to Distributor stop within Distributor JOURNEY PATTERN.</xsd:documentation>
       </xsd:annotation>
