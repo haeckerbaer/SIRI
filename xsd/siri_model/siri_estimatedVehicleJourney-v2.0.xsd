@@ -388,7 +388,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:sequence>
     <xsd:element name="RecordedCalls" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Observed call times for that art of teh journey that has already been completed.  (+ SIRI 2..0)</xsd:documentation>
+      <xsd:documentation>Complete sequence of stops already visited along the route path, in calling order. Only used if observed stop data is being recorded. (SIRI 2.0)</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>
@@ -398,7 +398,7 @@ the original journey and the nature of the difference.</xsd:documentation>
     </xsd:element>
     <xsd:element name="EstimatedCalls" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Estimated call times for journey</xsd:documentation>
+      <xsd:documentation>Complete sequence of stops along the route path, in calling order. Normally this is only the onwards stops from the vehicle's current position.</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>
@@ -422,12 +422,12 @@ the original journey and the nature of the difference.</xsd:documentation>
  </xsd:complexType>
  <xsd:element name="EstimatedCall" type="EstimatedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
+   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY. If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="EstimatedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Rea-ltime info about a VEHICLE JOURNEY Stop.</xsd:documentation>
+   <xsd:documentation>Type for real-time info about a VEHICLE JOURNEY Stop.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="StopPointInSequenceGroup"/>
@@ -471,7 +471,7 @@ the original journey and the nature of the difference.</xsd:documentation>
  <!-- ======================================================================= -->
  <xsd:element name="RecordedCall" type="RecordedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
+   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY. Only used if observed stop data is being recorded. (SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:group name="RecordedCallGroup">
@@ -512,7 +512,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a physical QUAY (platform). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedDepartureTime" minOccurs="0">
@@ -557,7 +557,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Assignments of departure platfiorm for Scheduled STOP POINT to a physical QUAY. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Assignments of departure platform for Scheduled STOP POINT to a physical QUAY. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedHeadwayInterval" minOccurs="0"/>
