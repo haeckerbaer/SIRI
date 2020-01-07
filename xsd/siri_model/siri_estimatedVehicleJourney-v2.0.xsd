@@ -219,75 +219,71 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
    <xsd:documentation>Type for Estimated SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:choice>
-    <xsd:element ref="InterchangeRef"/>
-    <xsd:sequence>
-     <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place. +SIRI v2.0</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="FeederJourneyRef" type="ConnectingJourneyRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a connecting feeder VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="FeederArrivalStopRef" type="StopPointRefStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>SCHEDULED STOP POINT at which feeder journey arrives. 
+   <xsd:element ref="InterchangeRef"/>
+   <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place. +SIRI v2.0</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="FeederJourneyRef" type="ConnectingJourneyRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>Reference to a connecting feeder VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="FeederArrivalStopRef" type="StopPointRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>SCHEDULED STOP POINT at which feeder journey arrives. 
 Assuming, for example, that the feeder is redirected to another QUAY by a dispositive measure in order to shorten the transfer time, 
 how do we communicate this change in the interchange? If the STOP POINTs are modelled QUAY accurate, FeederArrivalStopRef should always 
 reference the STOP POINT of the new/expected QUAY (which was transmitted in the ESTIMATED VEHICLE JOURNEY). +SIRI v2.1</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="FeederVisitNumber" type="VisitNumberType" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Sequence of visit to Feeder stop within Feeder JOURNEY PATTERN.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="FeederStopOrder" type="xsd:positiveInteger" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, 
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="FeederVisitNumber" type="VisitNumberType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Sequence of visit to Feeder stop within Feeder JOURNEY PATTERN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="FeederStopOrder" type="xsd:positiveInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, 
 ORDER can be used to associate the stop order instead. ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of 
 despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Planned time at which feeder VEHICLE is scheduled to arrive. SIRI v2.1</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="DistributorJourneyRef" type="ConnectingJourneyRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a connecting distributor VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="DistributorDepartureStopRef" type="StopPointRefStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>SCHEDULED STOP POINT at which distributor journey departs. 
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Planned time at which feeder VEHICLE is scheduled to arrive. SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DistributorJourneyRef" type="ConnectingJourneyRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>Reference to a connecting distributor VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DistributorDepartureStopRef" type="StopPointRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>SCHEDULED STOP POINT at which distributor journey departs. 
 Assuming that the distributor is directed to another QUAY (and that STOP POINTs are modelled QUAY accurate), DistributorDepartureStopRef 
 should always reference the STOP POINT of the new/expected QUAY (which was transmitted in the ESTIMATED VEHICLE JOURNEY). +SIRI v2.1</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="DistributorVisitNumber" type="VisitNumberType" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Sequence of visit to Distributor stop within Distributor JOURNEY PATTERN.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="DistributorStopOrder" type="xsd:positiveInteger" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, 
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DistributorVisitNumber" type="VisitNumberType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Sequence of visit to Distributor stop within Distributor JOURNEY PATTERN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DistributorStopOrder" type="xsd:positiveInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, 
 ORDER can be used to associate the stop order instead. ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of 
 despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. SIRI v2.1</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:choice>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:group ref="InterchangePropertyGroup" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Properties of SERVICE JOURNEY INTERCHANGE. It is important to note that the InterchangePropertyGroup displays planning data whereas, for example, 
