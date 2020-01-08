@@ -321,7 +321,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0">
+     <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Planned time at which feeder VEHICLE is scheduled to arrive. SIRI v2.1</xsd:documentation>
       </xsd:annotation>
@@ -346,7 +346,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
+     <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. SIRI v2.1</xsd:documentation>
       </xsd:annotation>
@@ -396,7 +396,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0">
+     <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Planned time at which feeder VEHICLE is scheduled to arrive. SIRI v2.1</xsd:documentation>
       </xsd:annotation>
@@ -421,7 +421,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
+     <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. SIRI v2.1</xsd:documentation>
       </xsd:annotation>
@@ -471,7 +471,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0">
+     <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Planned time at which feeder VEHICLE is scheduled to arrive. SIRI v2.1</xsd:documentation>
       </xsd:annotation>
@@ -496,7 +496,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
+     <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. SIRI v2.1</xsd:documentation>
       </xsd:annotation>
