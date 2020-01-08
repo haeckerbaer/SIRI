@@ -222,6 +222,11 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
    <xsd:choice>
     <xsd:element ref="InterchangeRef"/>
 	<xsd:sequence>
+	 <xsd:element name="InterchangeCode" type="InterchangeCodeType" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Identifier of ESTIMATED SERVICE JOURNEY INTERCHANGE in case it is an addition to the plan. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
      <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place. +SIRI v2.0</xsd:documentation>
