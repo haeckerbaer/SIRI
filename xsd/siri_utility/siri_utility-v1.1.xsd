@@ -221,7 +221,7 @@ Contains TYPE OF VALUEs that are an instance of the same class. +SIRI v2.1</xsd:
    <xsd:complexContent>
     <xsd:restriction base="ValueSetStructure">
      <xsd:sequence>
-	  <xsd:element name="ValueSetCode" type="ValueSetCodeType">
+      <xsd:element name="ValueSetCode" type="ValueSetCodeType">
        <xsd:annotation>
         <xsd:documentation>Identifier of VALUE SET.</xsd:documentation>
        </xsd:annotation>
@@ -321,7 +321,7 @@ Contains TYPE OF VALUEs that are an instance of the same class. +SIRI v2.1</xsd:
   </xsd:annotation>
   <xsd:complexType>
    <xsd:complexContent>
-  	<xsd:extension base="TypeOfValueStructure"/>
+    <xsd:extension base="TypeOfValueStructure"/>
    </xsd:complexContent>
   </xsd:complexType>
  </xsd:element>
