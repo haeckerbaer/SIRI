@@ -224,9 +224,9 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:extension base="PlaceNameStructure">
     <xsd:sequence>
-     <xsd:element name="ViaPriority" type="xsd:nonNegativeInteger" default="2" minOccurs="0">
+     <xsd:element name="ViaPriority" type="xsd:nonNegativeInteger" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Relative priority to give to VIA name in displays. 1=high. Default is 2. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Relative priority to give to VIA name in displays. 1=high. +SIRI v2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -672,7 +672,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="PredictionLevel" type="QualityIndexEnumeration">
     <xsd:annotation>
-     <xsd:documentation>An approxiimate characterisation of prediction quality as one of five values . +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>An approxiimate characterisation of prediction quality as one of five values. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:sequence minOccurs="0">
@@ -781,9 +781,11 @@ Rail transport, Roads and road transport
    <xsd:documentation>QUAY sector name to show passenger, i.e., section of the ARRIVAL PLATFORM where passengers may actually alight or board the vehicle. Can be omitted if the same as DepartureSectorName. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration" default="alighting">
+ <xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Type of boarding and alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
+   <xsd:documentation>Type of boarding and alighting allowed at stop. Inherited property, i.e., if omitted in an update message: same as indicated by 
+(i) any preceding update message, 
+(ii) or default value "alighting" in case no preceding message exists.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:group name="VehicleArrivalTimesGroup">
@@ -861,9 +863,11 @@ Rail transport, Roads and road transport
    <xsd:documentation>QUAY sector name to show passenger, i.e., section of the DEPARTURE PLATFORM where passengers may actually board or alight the vehicle. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:element name="DepartureBoardingActivity" type="DepartureBoardingActivityEnumeration" default="boarding">
+ <xsd:element name="DepartureBoardingActivity" type="DepartureBoardingActivityEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Nature of boarding allowed at stop. Default is 'Boarding'.</xsd:documentation>
+   <xsd:documentation>Nature of boarding allowed at stop. Inherited property, i.e., if omitted in an update message: same as indicated by 
+(i) any preceding update message, 
+(ii) or default value "boarding" in case no preceding message exists.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:group name="VehicleDepartureTimesGroup">
