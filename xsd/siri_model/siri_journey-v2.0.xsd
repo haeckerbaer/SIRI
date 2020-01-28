@@ -1013,10 +1013,7 @@ Rail transport, Roads and road transport
   </xsd:complexContent>
  </xsd:complexType>
  <!-- ===== Train formation / composition model inspired by NeTEx and VDV454 ================================================================= -->
- <!-- ===== NeTEx VehicleType? ===== -->
- <!-- ===== NeTEx Train (with TrainComponent and TrainElement) ===== -->
- <!-- ===== NeTEx CompoundTrain ===== -->
- <!-- ===== New structures imbedded in the StopAssignmentStructure to mimic VDV454 "FoHalte" of the formation model ===== -->
+ <!-- ===== (NeTEx VehicleType?) ===== -->
  <xsd:group name="JourneyFormationGroup">
   <xsd:annotation>
    <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
@@ -1057,6 +1054,7 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
+ <!-- ===== New structures imbedded in the StopAssignmentStructure to mimic VDV454 "FoHalte" of the formation model ========================= -->
  <xsd:group name="CallFormationGroup">
   <xsd:annotation>
    <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
@@ -1129,8 +1127,17 @@ The latter example would implicate that the vehicle will depart towards the refe
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element ref="PassengerCapacity" minOccurs="0"/>
-   <!-- ersetzen mit +structure für ZustandsText-->
+   <xsd:element name="Capacities" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Break down of Capacities by FARE CLASS (number of passengers that TRAIN ELEMENT can carry).</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element ref="PassengerCapacity" maxOccurs="unbounded"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <!-- replace with +structure for  additional Status text -->
    <xsd:element name="VehicleStatus" type="VehicleStatusEnumeration">
     <xsd:annotation>
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
@@ -1138,7 +1145,7 @@ The latter example would implicate that the vehicle will depart towards the refe
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <!-- ===== NeTEx PassengerCapacity model ===== -->
+ <!-- ===== NeTEx PassengerCapacity ============================================ -->
  <xsd:element name="PassengerCapacity" type="PassengerCapacityStructure">
   <xsd:annotation>
    <xsd:documentation>Capacity for a VEHICLE TYPE and fare class. +SIRI v2.1</xsd:documentation>
@@ -1199,7 +1206,7 @@ The latter example would implicate that the vehicle will depart towards the refe
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <!-- ======================================================================= -->
+ <!-- ===== NeTEx TrainElement: corresponds to VDV454 FoFahrzeuge. +SIRI v2.1 ============================================ -->
  <xsd:element name="TrainElement" type="TrainElementStructure">
   <xsd:annotation>
    <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
@@ -1218,7 +1225,6 @@ The latter example would implicate that the vehicle will depart towards the refe
    <xsd:group ref="TrainElementGroup"/>
   </xsd:sequence>
  </xsd:complexType>
- <!-- ... -->
  <xsd:group name="TrainElementGroup">
   <xsd:annotation>
    <xsd:documentation>Elements for a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
@@ -1274,6 +1280,7 @@ The latter example would implicate that the vehicle will depart towards the refe
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
+ <!-- ===== NeTEx TrainComponent: corresponds to VDV454 FoFahrzeugPosition. +SIRI v2.1 ============================================ -->
  <xsd:element name="TrainComponent" type="TrainComponentStructure">
   <xsd:annotation>
    <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
@@ -1318,6 +1325,7 @@ The latter example would implicate that the vehicle will depart towards the refe
    </xsd:choice>
   </xsd:sequence>
  </xsd:group>
+ <!-- ===== NeTEx Train: corresponds to VDV454 FoFahrzeugGruppe. +SIRI v2.1 ============================================ --> 
  <xsd:element name="Train" type="TrainStructure">
   <xsd:annotation>
    <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
@@ -1365,6 +1373,7 @@ The latter example would implicate that the vehicle will depart towards the refe
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
+ <!-- ===== NeTEx CompoundTrain: When combined with the CompoundTrainRef in JourneyPartInfo it corresonds to VDV454 FoFahrzeugGruppenFahrtAbschnitt. +SIRI v2.1 =========================== -->
  <xsd:element name="CompoundTrain" type="CompoundTrainStructure">
   <xsd:annotation>
    <xsd:documentation>A vehicle composed of COMPOUND TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
@@ -1446,6 +1455,7 @@ The latter example would implicate that the vehicle will depart towards the refe
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
+ <!-- ===== Various NeTEx property groups needed for the train formation model. +SIRI v2.1 ============================================ -->
  <xsd:group name="VehicleTypeGroup">
   <xsd:annotation>
    <xsd:documentation>Elements for a VEHICLE. TYPE. +SIRI v2.1</xsd:documentation>
@@ -1569,4 +1579,5 @@ The latter example would implicate that the vehicle will depart towards the refe
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
+ <!-- ======================================================================================================== -->
 </xsd:schema>
