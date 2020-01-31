@@ -502,9 +502,19 @@ the original journey and the nature of the difference.</xsd:documentation>
      <xsd:documentation>Type of boarding and alighting at stop, e.g. alighting, noAlighting or passThru. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0">
+   <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a physical QUAY (platform). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ArrivalFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Assignments of a TRAIN formation to a physical QUAY. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RecordedArrivalOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedDepartureTime" minOccurs="0">
@@ -547,9 +557,19 @@ the original journey and the nature of the difference.</xsd:documentation>
      <xsd:documentation>Nature of boarding at stop, e.g. boarding, noBoarding or passThru. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0">
+   <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Assignments of departure platform for Scheduled STOP POINT to a physical QUAY. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DepartureFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Assignments of a TRAIN formation to a physical QUAY. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RecordedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedHeadwayInterval" minOccurs="0"/>
