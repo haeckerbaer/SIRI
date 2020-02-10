@@ -457,6 +457,19 @@ Rail transport, Roads and road transport
    <xsd:documentation>Reference to a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
+ <!-- ============================ -->
+ <xsd:group name="TrainFormationReferenceGroup">
+  <xsd:annotation>
+   <xsd:documentation>Goups together the relevant references needed in a formation. 
+Either the smallest part of a formation, a TRAIN COMPONENT, is referenced or the TRAIN itself. 
+If the formation consists of multiple coupled TRAINs, a reference to the COMPOUND TRAIN is possible too.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element ref="CompoundTrainRef" minOccurs="0"/>
+   <xsd:element ref="TrainRef" minOccurs="0"/>
+   <xsd:element ref="TrainComponentRef" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:group>
  <!-- =====MonitoredCallPoint============================================================ -->
  <xsd:simpleType name="BoardingActivityEnumeration">
   <xsd:annotation>
@@ -801,10 +814,44 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
    </xsd:enumeration>
   </xsd:restriction>
  </xsd:simpleType>
+ <!-- =====StopAssignment============================================================ -->
+ <xsd:simpleType name="QuayTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for QuayType which is used to characterise the STOP ASSIGNMENTs. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="platformGroup">
+    <xsd:annotation>
+     <xsd:documentation>A type of QUAY that consists of multiple QUAYs of type 'platform'. Examples of such groups would be the lower and upper level of a station.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="platform">
+    <xsd:annotation>
+     <xsd:documentation>A type of QUAY that consists of at least two child QUAYs of type 'platformEdge'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="platformEdge">
+    <xsd:annotation>
+     <xsd:documentation>A type of QUAY which allows direct access to a VEHICLE, e.g. an on-street bus stop, or consists of multiple child QUAYs of type 'platformSector'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="platformSector">
+    <xsd:annotation>
+     <xsd:documentation>A QUAY of type 'platformEdge' may be divided into multiple sectors, e.g. "A", "B", "C" etc., to help passengers find a specific part of a vehicle. 
+The first class carriage of a TRAIN might, for example, be assigned to sector "A" of a QUAY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="boardingPosition">
+    <xsd:annotation>
+     <xsd:documentation>A location within a QUAY from which passengers may directly board, or onto which passengers may directly alight from a VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
  <!-- =============================================================================== -->
  <xsd:simpleType name="TrainElementTypeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for TYPE OF TRAIIN ELEMENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for TYPE OF TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="buffetCar"/>
