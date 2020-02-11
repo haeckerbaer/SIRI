@@ -628,7 +628,7 @@ Rail transport, Roads and road transport
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
-	<xsd:element name="ArrivalPredictionUnknown" type="EmptyType">
+    <xsd:element name="ArrivalPredictionUnknown" type="EmptyType">
      <xsd:annotation>
       <xsd:documentation>If the producer is (temporarily) not able to deliver real-time predictions (e.g. because of a connection loss), he has various options to inform the consumer:
 (i) set Monitored to 'false'
@@ -675,7 +675,7 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
-	<xsd:element name="DeparturePredictionUnknown" type="EmptyType">
+    <xsd:element name="DeparturePredictionUnknown" type="EmptyType">
      <xsd:annotation>
       <xsd:documentation>If the producer is (temporarily) not able to deliver real-time predictions (e.g. because of a connection loss), he has various options to inform the consumer:
 (i) set Monitored to 'false'
@@ -1382,11 +1382,11 @@ More accurate data can be provided by the individual occupancies or capacities b
     <xsd:annotation>
      <xsd:documentation>Provides capacity information relevant for the used occupancy scope filter.</xsd:documentation>
     </xsd:annotation>
-   	<xsd:complexType>
-	 <xsd:sequence>
+    <xsd:complexType>
+     <xsd:sequence>
       <xsd:group ref="PassengerCapacityGroup"/>
-	 </xsd:sequence>
-   	</xsd:complexType>
+     </xsd:sequence>
+    </xsd:complexType>
    </xsd:element>
    <!-- Here and in JourneyPartInfo or only in one of the two? Or just allow a JourneyPartRef here? 
         Do we actually need to indicate it for every stop? But if we only indicate it in JourneyPartInfo, it becomees independent from the Occupancy model.. -->
@@ -1659,10 +1659,10 @@ More accurate data can be provided by the individual occupancies or capacities b
     <xsd:annotation>
      <xsd:documentation>Facilities of TRAIN ELEMENT.</xsd:documentation>
     </xsd:annotation>
-	<xsd:complexType>
+    <xsd:complexType>
      <xsd:sequence>
       <xsd:choice maxOccurs="unbounded">
-	   <xsd:element ref="VehicleFeature"/>
+       <xsd:element ref="VehicleFeature"/>
        <xsd:element name="Facility" type="FacilityStructure"/>
        <xsd:element ref="FacilityRef"/>
       </xsd:choice>
