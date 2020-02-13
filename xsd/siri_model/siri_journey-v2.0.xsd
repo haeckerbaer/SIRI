@@ -1641,9 +1641,9 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>xxx.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
-	 <xsd:sequence>
+     <xsd:sequence>
       <xsd:element name="PassageToTrain" type="PassageToTrainStructure" maxOccurs="unbounded"/>
-	 </xsd:sequence>
+     </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
    <xsd:element name="FormationUpdate" type="FormationUpdateStructure" minOccurs="0">
