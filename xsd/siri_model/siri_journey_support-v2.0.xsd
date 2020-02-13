@@ -956,4 +956,14 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
   </xsd:restriction>
  </xsd:simpleType>
  <!-- =============================================================================== -->
+ <xsd:simpleType name="OrientationEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for orientation of TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="forwards"/>
+   <xsd:enumeration value="backwards"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <!-- =============================================================================== -->
 </xsd:schema>
