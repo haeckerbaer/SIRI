@@ -487,11 +487,6 @@ the original journey and the nature of the difference.</xsd:documentation>
 (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element ref="ArrivalSectorName" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>QUAY sector name to show passenger, i.e., section of the ARRIVAL PLATFORM where passengers may actually alight or board the vehicle. Can be omitted if the same as DepartureSectorName. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
    <xsd:element ref="ArrivalBoardingActivity" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Type of boarding and alighting at stop, e.g. alighting, noAlighting or passThru. +SIRI v2.1</xsd:documentation>
@@ -525,11 +520,6 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element ref="DeparturePlatformName" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Bay or platform (QUAY) name from which VEHICLE will depart. Inherited property.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="DepartureSectorName" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>QUAY sector name to show passenger, i.e., section of the DEPARTURE PLATFORM where passengers may actually board or alight the vehicle. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="ActualDepartureTime" minOccurs="0">
