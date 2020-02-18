@@ -187,9 +187,9 @@ Rail transport, Roads and road transport
   <xsd:annotation>
    <xsd:documentation>Type for reference to STOP PLACE Space.</xsd:documentation>
   </xsd:annotation>
-  <xsd:complexContent>
+  <xsd:simpleContent>
    <xsd:extension base="StopPlaceComponentRefStructure"/>
-  </xsd:complexContent>
+  </xsd:simpleContent>
  </xsd:complexType>
  <!-- ======================================================================= -->
  <xsd:simpleType name="PublicCodeType">
