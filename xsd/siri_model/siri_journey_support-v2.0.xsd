@@ -467,7 +467,7 @@ If the formation consists of multiple coupled TRAINs, a reference to the COMPOUN
   <xsd:sequence>
    <xsd:element ref="CompoundTrainRef" minOccurs="0"/>
    <xsd:element ref="TrainRef" minOccurs="0"/>
-   <xsd:element ref="TrainComponentRef" minOccurs="0"/>
+   <xsd:element ref="TrainElementRef" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
  <!-- =====MonitoredCallPoint============================================================ -->
@@ -966,11 +966,17 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
   </xsd:restriction>
  </xsd:simpleType>
  <!-- =============================================================================== -->
- <xsd:simpleType name="VehicleStatusEnumeration">
+ <xsd:simpleType name="VehicleInFormationStatusEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for VEHICLE STATUS CODE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for VEHICLE IN FORMATION STATUS CODE. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
-  <xsd:restriction base="FacilityStatusEnumeration">
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="unknown"/>
+   <xsd:enumeration value="available"/>
+   <xsd:enumeration value="notAvailable"/>
+   <xsd:enumeration value="partiallyAvailable"/>
+   <xsd:enumeration value="added"/>
+   <xsd:enumeration value="removed"/>
    <xsd:enumeration value="defective"/>
    <xsd:enumeration value="closed"/>
    <xsd:enumeration value="booked"/>
@@ -979,9 +985,9 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
   </xsd:restriction>
  </xsd:simpleType>
  <!-- =============================================================================== -->
- <xsd:simpleType name="FormationUpdateEnumeration">
+ <xsd:simpleType name="FormationChangeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for FORMATION UPDATE CODE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for FORMATION CHANGE CODE. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="changedFormation"/>
