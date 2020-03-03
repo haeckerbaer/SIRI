@@ -339,7 +339,7 @@ A journey (with VEHICLE TYPE 'rail') does always have one or more JOURNEY PARTs 
    <xsd:group ref="JourneyPartViewGroup" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
-  <xsd:complexType name="DatedJourneyPartInfoStructure">
+ <xsd:complexType name="DatedJourneyPartInfoStructure">
   <xsd:annotation>
    <xsd:documentation>Type for a reference to JOURNEY PART. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
