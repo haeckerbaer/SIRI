@@ -150,7 +150,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="ReasonForRemoval" type="NaturalLanguageStringStructure">
     <xsd:annotation>
-    <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey from the plan. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey from the plan. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="JourneyPatternInfoGroup"/>
@@ -347,7 +347,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element ref="InterchangeCode" type="InterchangeCodeType" minOccurs="0"/>
      <xsd:element ref="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0"/>
-	 <xsd:choice>
+     <xsd:choice>
       <xsd:element ref="ExtraInterchange" type="xsd:boolean" default="false" minOccurs="0"/>
       <xsd:element ref="Cancellation" type="xsd:boolean" default="false" minOccurs="0"/>
      </xsd:choice>
@@ -378,7 +378,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element ref="InterchangeRef" type="InterchangeRefStructure"/>
      <xsd:element ref="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0"/>
-	 <xsd:element ref="ReasonForRemoval" type="NaturalLanguageStringStructure"/>
+     <xsd:element ref="ReasonForRemoval" type="NaturalLanguageStringStructure"/>
      <xsd:element ref="FeederRef" type="ConnectingJourneyRefStructure"/>
      <xsd:element ref="FeederArrivalStopRef" type="StopPointRefStructure"/>
      <xsd:element ref="FeederVisitNumber" type="VisitNumberType" minOccurs="0"/>
@@ -648,7 +648,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:element name="ReasonForRemoval" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-  <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) an interchange from the plan. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) an interchange from the plan. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="FeederRef" type="ConnectingJourneyRefStructure">
