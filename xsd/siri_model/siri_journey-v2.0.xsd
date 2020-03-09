@@ -1173,7 +1173,7 @@ If a QUAY is divided into sectors (with the help of STOP ASSIGNMENTs), and a VEH
       <xsd:documentation>Status of formation.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
-	<xsd:element name="VehicleStatus" type="VehicleStatusStructure">
+    <xsd:element name="VehicleStatus" type="VehicleStatusStructure">
      <xsd:annotation>
       <xsd:documentation>Status of a vehicle within formation.</xsd:documentation>
      </xsd:annotation>
@@ -1657,9 +1657,9 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>Specifies whether a passage from/to an adjacent VEHICLE is possible for passengers.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
-	 <xsd:sequence>
+     <xsd:sequence>
       <xsd:element name="PassageBetweenTrains" type="PassageBetweenVehiclesStructure" maxOccurs="2"/>
-	 </xsd:sequence>
+     </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
@@ -1671,10 +1671,10 @@ More accurate data can be provided by the individual occupancies or capacities b
   <xsd:sequence>
    <xsd:choice>
     <xsd:element ref="VehicleRef"/>
-	<xsd:sequence>
+    <xsd:sequence>
      <xsd:element ref="TrainRef"/>
      <xsd:element ref="TrainElementRef" minOccurs="0"/>
-	</xsd:sequence>
+    </xsd:sequence>
    </xsd:choice>
    <xsd:element name="PassageIsPossible" type="xsd:boolean"/>
   </xsd:sequence>
