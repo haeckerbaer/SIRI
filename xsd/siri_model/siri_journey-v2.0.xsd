@@ -510,8 +510,8 @@ Rail transport, Roads and road transport
      <xsd:documentation>Indication of the direction of travel of the vehicle or formation (e.g. TRAIN composition ) with respect to the platform, or more precisely the QUAY. 
 For example "towards A", which means that the vehicle departs towards sector "A" of the QUAY. It is advised to specify a reference point that is meaningful for passengers on location. 
 Unbounded to allow multiple languages. +SIRI v2.1</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="ExpectedArrivalOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Real-time occupancies and capacities of a vehicle (by fare classes) when arriving at a given STOP POINT. +SIRI v2.1</xsd:documentation>
@@ -553,8 +553,8 @@ Unbounded to allow multiple languages. +SIRI v2.1</xsd:documentation>
      <xsd:documentation>Indication of the direction of travel of the vehicle or formation (e.g. TRAIN composition ) with respect to the platform, or more precisely the QUAY. 
 For example "towards A", which means that the vehicle departs towards sector "A" of the QUAY. It is advised to specify a reference point that is meaningful for passengers on location. 
 Unbounded to allow multiple languages. +SIRI v2.1</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="ExpectedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Real-time occupancies and capacities of a vehicle (by fare classes) when departing at a given STOP POINT. +SIRI v2.1</xsd:documentation>
@@ -669,7 +669,7 @@ Unbounded to allow multiple languages. +SIRI v2.1</xsd:documentation>
      </xsd:element>
     </xsd:sequence>
     <xsd:element name="ArrivalPredictionUnknown" type="EmptyType">
-	 <xsd:annotation>
+     <xsd:annotation>
       <xsd:documentation>If the producer is (temporarily) not able to deliver real-time predictions (e.g. because of a connection loss), he has various options (and combinations of them) to inform the consumer:
 (i) set Monitored to 'false'
 (ii) transmit ExpectedArrivalTime together with "PredictionInaccurate=true"
