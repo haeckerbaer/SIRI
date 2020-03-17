@@ -221,20 +221,24 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>LINE Reference.</xsd:documentation>
+     <xsd:documentation>Reference to LINE.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>TRAIN NUMBER Reference.</xsd:documentation>
+     <xsd:documentation>Reference to TRAIN NUMBER.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>OPERATOR Reference.</xsd:documentation>
+     <xsd:documentation>Reference to OPERATOR.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0"/>
+   <xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Participant reference that identifies producer of data.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <!-- ===== INTERCHANGE identfiers=============================================================== -->

@@ -479,7 +479,7 @@ A journey (with VEHICLE TYPE 'rail') does always have one or more JOURNEY PARTs 
      <xsd:sequence>
       <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>TRAIN NUMBER  assigned to VEHICLE JOURNEY.  +SIRI  2.0</xsd:documentation>
+        <xsd:documentation>TRAIN NUMBER assigned to VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -487,13 +487,13 @@ A journey (with VEHICLE TYPE 'rail') does always have one or more JOURNEY PARTs 
    </xsd:element>
    <xsd:element name="JourneyParts" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>JOURNEY PARTs making up JOURNEY +SIRIv2.0 e.</xsd:documentation>
+     <xsd:documentation>JOURNEY PARTs making up JOURNEY. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
       <xsd:element name="JourneyPartInfo" type="DatedJourneyPartInfoStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Information about Parts of JOURNEY  +SIRI v2.0</xsd:documentation>
+        <xsd:documentation>Information about Parts of JOURNEY. +SIRI v2.0</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
